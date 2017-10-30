@@ -13,4 +13,4 @@ yarn start
 
 ## Screen shot
 
-![](./MobileApp.jpg)
+<img src="./MobileApp.jpg" width="360" /> 
