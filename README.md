@@ -11,3 +11,6 @@ yarn install
 yarn start
 ```
 
+## Screen shot
+
+![](./MobileApp.jpg)
