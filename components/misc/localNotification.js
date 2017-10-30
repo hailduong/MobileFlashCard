@@ -24,7 +24,7 @@ export const setNotification = () => {
 
 			let tomorrow = new Date();
 			tomorrow.setDate(tomorrow.getDate() + 1);
-			tomorrow.setHour(20);
+			tomorrow.setHours(20);
 			tomorrow.setMinutes(0);
 
 			const schedulingOptions = {

@@ -7,7 +7,7 @@ export default class DeckItem extends React.Component {
 		const thisID = this.props.ID;
 		this.props.navigateToThisDeck(thisID);
 	};
-	
+
 	render() {
 
 		const {title, questions} = this.props.itemData;
@@ -16,13 +16,9 @@ export default class DeckItem extends React.Component {
 		return (
 			<TouchableOpacity style={styles.deckContainer} onPress={this.handleClickDeck}>
 				<Text style={styles.title}>{title}</Text>
-				<Text>{numberOfCards} cards</Text>
+				<Text style={styles.numberOfCards}>{numberOfCards} cards</Text>
 			</TouchableOpacity>
 		)
-	}
-
-	componentDidMount() {
-		
 	}
 }
 
@@ -31,10 +27,19 @@ const styles = StyleSheet.create({
 		height: 100,
 		justifyContent: 'center',
 		alignItems: 'center',
-		borderBottomColor: '#999',
-		borderBottomWidth: 1
+		marginTop: 35,
+		elevation: 2,
+		borderRadius:10,
+		width: '80%',
+		backgroundColor:'#fff'
 	},
 	title: {
-		fontWeight: 'bold'
+		fontWeight: 'bold',
+		fontSize: 24,
+		color:'#607d8b'
+	},
+	numberOfCards: {
+		fontSize: 18,
+		color:'#90a4ae'
 	}
 });

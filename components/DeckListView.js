@@ -27,7 +27,7 @@ class DeckListView extends React.Component {
 		});
 
 		return (
-			<View style={styles.deckContainer}>
+			<View style={styles.deckListContainer}>
 				{deckListNode}
 			</View>
 		)
@@ -48,7 +48,9 @@ class DeckListView extends React.Component {
 
 const styles = StyleSheet.create({
 	deckListContainer: {
-		flex: 1
+		flex: 1,
+		alignItems:'center',
+		backgroundColor:'#eceff1'
 	}
 });
 

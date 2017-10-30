@@ -80,7 +80,7 @@ class QuizView extends React.Component {
 											{question}
 										</Text>
 										<TouchableOpacity onPress={this.toggleFace}>
-											<Text>Answer</Text>
+											<Text style={[styles.textGrayLight, styles.mBL]}>Answer</Text>
 										</TouchableOpacity>
 									</View>
 				: <View style={styles.mainTextContainer}>
@@ -88,7 +88,7 @@ class QuizView extends React.Component {
 											{answer}
 										</Text>
 										<TouchableOpacity onPress={this.toggleFace}>
-											<Text>Question</Text>
+											<Text style={[styles.textGrayLight, styles.mBL]}>Question</Text>
 										</TouchableOpacity>
 									</View>;
 
@@ -104,11 +104,11 @@ class QuizView extends React.Component {
 						<View style={styles.buttonContainer}>
 							<TouchableOpacity style={[styles.button, styles.greenBg]}
 											  onPress={this.handleClickCorrectBtn}>
-								<Text style={styles.buttonText}>Correct</Text>
+								<Text style={styles.buttonText}>CORRECT</Text>
 							</TouchableOpacity>
 							<TouchableOpacity style={[styles.button, styles.redBg]}
 											  onPress={this.handleClickIncorrectBtn}>
-								<Text style={styles.buttonText}>Incorrect</Text>
+								<Text style={styles.buttonText}>INCORRECT</Text>
 							</TouchableOpacity>
 						</View>
 					</View>
@@ -121,10 +121,10 @@ class QuizView extends React.Component {
 		const percentageOfCorrectAnswers = Math.round(numberOfCorrectAnswer / totalQuestions * 1000) / 10;
 
 		return (
-			<View>
+			<View style={styles.mainTextContainer}>
 				{/* Quiz Completed View */}
-				<Text>You have completed this Quiz</Text>
-				<Text>Correct: {percentageOfCorrectAnswers}%</Text>
+				<Text style={[styles.mainText, styles.mBL, {fontSize:38}]}>You have completed {"\n"} this Quiz</Text>
+				<Text style={styles.correctText}>Correct: {percentageOfCorrectAnswers}%</Text>
 				{/* End Quiz Completed View */}
 			</View>
 		)
@@ -138,36 +138,56 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 	currentQuestion: {
-		fontSize: 28,
+		fontSize: 24,
+		textAlign: 'right',
+		paddingRight: 15
 	},
 	mainTextContainer: {
 		alignItems: 'center',
-		justifyContent: 'center',
-		height: 400
+		minHeight: 300,
+		paddingLeft: 20,
+		paddingRight: 20,
+		paddingTop: 90
 	},
 	mainText: {
-		fontSize: 56,
-		textAlign: 'center'
+		fontSize: 48,
+		textAlign: 'center',
+		marginBottom: 20,
+		color: '#607d8b',
+		fontWeight: '400'
 	},
 	buttonContainer: {
 		alignItems: 'center'
 	},
 	button: {
-		width: 300,
+		width: 220,
 		height: 60,
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderRadius: 4,
-		marginBottom: 10
+		borderRadius: 10,
+		marginBottom: 15
 	},
 	greenBg: {
-		backgroundColor: 'green'
+		backgroundColor: '#4CAF50'
 	},
 	redBg: {
-		backgroundColor: 'red'
+		backgroundColor: '#F44336'
+	},
+	textGrayLight: {
+		color: '#90a4ae'
+	},
+	mBL: {
+		marginBottom: 30
 	},
 	buttonText: {
-		color: 'white'
+		color: 'white',
+		fontSize: 18,
+		fontWeight: '500'
+	},
+	correctText: {
+		color: '#4CAF50',
+		fontSize: 28,
+		fontWeight:'500'
 	}
 
 });

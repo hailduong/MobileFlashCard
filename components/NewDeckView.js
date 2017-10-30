@@ -31,9 +31,13 @@ class NewDeckView extends React.Component {
 		return (
 			<View style={styles.container}>
 				<Text style={styles.headerText}>What is the title of your new deck?</Text>
-				<TextInput style={styles.deckNameInput} value={this.state.inputDeckName} onChangeText={this.handleDeckNameChange}/>
+				<TextInput style={styles.deckNameInput} 
+						   value={this.state.inputDeckName} 
+						   onChangeText={this.handleDeckNameChange}
+						   placeholder="e.g. Earth History"
+				/>
 				<TouchableOpacity style={styles.submitButton} onPress={this.submitNewDeck}>
-					<Text style={styles.submitButtonText}>Submit</Text>
+					<Text style={styles.submitButtonText}>SUBMIT</Text>
 				</TouchableOpacity>
 			</View>
 		)
@@ -45,26 +49,30 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	headerText: {
-		fontSize: 60,
+		fontSize: 48,
 		textAlign: 'center',
 		marginTop: 70,
-		marginBottom: 70
+		marginBottom: 70,
+		color:'#607d8b'
 	},
 	deckNameInput: {
-		fontSize: 32,
+		fontSize: 28,
 		width: '90%',
-		marginBottom: 70
+		marginBottom: 70,
+		paddingBottom:10,
+		textAlign:'center'
 	},
 	submitButton: {
-		borderRadius: 5,
-		backgroundColor: '#ff9900',
+		borderRadius: 10,
+		backgroundColor: '#00b9f2',
 		padding: 10,
 		width: 150
 	},
 	submitButtonText: {
-		fontSize: 24,
+		fontSize: 18,
 		textAlign: 'center',
 		color: '#fff',
+		fontWeight:'500'
 	}
 });
 

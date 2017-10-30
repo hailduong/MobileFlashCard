@@ -33,15 +33,15 @@ class DeckView extends React.Component {
 					<Text style={styles.numberOfCard}>{numberOfCards} cards</Text>
 				</View>
 				<View style={styles.container}>
-					<TouchableOpacity style={[styles.btn, styles.addCardBtn]} onPress={this.addCard}>
-						<Text>Add Card</Text>
-					</TouchableOpacity>
 					{/* Only show the "Start Quiz" button if there are cards */}
 					{!!numberOfCards
-					&& <TouchableOpacity style={[styles.btn, styles.addCardBtn]} onPress={this.startQuiz}>
-						<Text>Start Quiz</Text>
+					&& <TouchableOpacity style={[styles.btn, styles.btnInfo, styles.marginBottom]} onPress={this.startQuiz}>
+						<Text style={[styles.btnInfoText]}>START QUIZ</Text>
 					</TouchableOpacity>
 					}
+					<TouchableOpacity style={[styles.btn, styles.btnDefault]} onPress={this.addCard}>
+						<Text style={[styles.btnDefaultText]}>ADD CARD</Text>
+					</TouchableOpacity>
 				</View>
 			</View>
 		)
@@ -50,17 +50,35 @@ class DeckView extends React.Component {
 
 const styles = StyleSheet.create({
 	container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
-	deckTitle: {fontSize: 42, fontWeight: '500', marginBottom: 20},
-	numberOfCard: {color: '#999999', fontSize: 28},
+	deckTitle: {fontSize: 42, fontWeight: '500', marginBottom: 10, color: '#455a64'},
+	numberOfCard: {color: '#90a4ae', fontSize: 28},
 	btn: {
-		width: 200,
-		backgroundColor: '#00b9f2',
-		borderRadius: 3,
-		height: 35,
+		width: 220,
+		borderRadius: 10,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		paddingTop: 10,
+		paddingLeft: 20,
+		paddingBottom: 10,
+		paddingRight: 25
 	},
-	addCardBtn: {
+	btnInfo: {
+		backgroundColor: '#00b9f2',
+	},
+	btnInfoText: {
+		fontSize: 18,
+		color: '#fff',
+		fontWeight: '500'
+	},
+	btnDefault: {
+		backgroundColor: '#cfd8dc',
+	},
+	btnDefaultText: {
+		fontSize: 18,
+		color: '#546e7a',
+		fontWeight: '500'
+	},
+	marginBottom: {
 		marginBottom: 10
 	}
 });

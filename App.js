@@ -31,8 +31,12 @@ const StackNav = StackNavigator({
 		screen: DeckListView,
 		navigationOptions: {
 			headerTitle: 'Deck List',
+			headerTitleStyle:{
+				color:'#006064'
+			},
+			headerTintColor:'#006064',
 			headerStyle: {
-				backgroundColor: '#80DEEA'
+				backgroundColor: '#b2ebf2'
 			}
 		}
 	},
@@ -40,8 +44,12 @@ const StackNav = StackNavigator({
 		screen: DeckView,
 		navigationOptions: {
 			headerTitle: 'Deck',
+			headerTitleStyle:{
+				color:'#006064'
+			},
+			headerTintColor:'#006064',
 			headerStyle: {
-				backgroundColor: '#80DEEA'
+				backgroundColor: '#b2ebf2'
 			}
 		}
 	},
@@ -49,8 +57,12 @@ const StackNav = StackNavigator({
 		screen: QuizView,
 		navigationOptions: {
 			headerTitle: 'Quiz',
+			headerTitleStyle:{
+				color:'#006064'
+			},
+			headerTintColor:'#006064',
 			headerStyle: {
-				backgroundColor: '#80DEEA'
+				backgroundColor: '#b2ebf2'
 			}
 		}
 	},
@@ -58,8 +70,12 @@ const StackNav = StackNavigator({
 		screen: NewQuestionView,
 		navigationOptions: {
 			headerTitle: 'New Question',
+			headerTitleStyle:{
+				color:'#006064'
+			},
+			headerTintColor:'#006064',
 			headerStyle: {
-				backgroundColor: '#80DEEA'
+				backgroundColor: '#b2ebf2'
 			}
 		}
 	}
@@ -83,10 +99,14 @@ const MainNavigator = TabNavigator({
 	tabBarOptions: {
 		activeTintColor: '#fff',
 		labelStyle: {
-			fontWeight: '700'
+			fontWeight: '700',
+			fontSize:18
 		},
 		style: {
-			backgroundColor: '#00b9f2'
+			backgroundColor: '#00b9f2',
+		},
+		indicatorStyle:{
+			backgroundColor:'#ffe082'
 		}
 	}
 });

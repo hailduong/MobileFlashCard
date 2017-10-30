@@ -44,7 +44,7 @@ class NewQuestionView extends React.Component {
 				<TextInput style={styles.input} onChangeText={this.handleQuestionChange} placeholder="Question" value={question}/>
 				<TextInput style={styles.input} onChangeText={this.handleAnswerChange} placeholder="Answer" value={answer}/>
 				<TouchableOpacity style={styles.submitButton} onPress={this.handleSubmitQuestion}>
-					<Text style={styles.submitButtonText}>Submit</Text>
+					<Text style={styles.submitButtonText}>ADD QUESTION</Text>
 				</TouchableOpacity>
 			</View>
 		)
@@ -54,24 +54,26 @@ class NewQuestionView extends React.Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
+		alignItems: 'center'
 	},
 	input: {
-		fontSize: 32,
+		fontSize: 28,
 		width: '90%',
-		marginBottom: 70
+		marginTop: 70,
+		paddingBottom: 10,
 	},
 	submitButton: {
-		borderRadius: 5,
-		backgroundColor: '#ff9900',
+		borderRadius: 10,
+		backgroundColor: '#00b9f2',
 		padding: 10,
-		width: 150
+		width: 220,
+		marginTop: 70
 	},
 	submitButtonText: {
-		fontSize: 24,
+		fontSize: 18,
 		textAlign: 'center',
 		color: '#fff',
+		fontWeight: '500'
 	}
 });
 
